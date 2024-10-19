@@ -1,0 +1,196 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/* Fondo de la barra de navegación */
+.bg-custom {
+    background-color: #54ab8a; /* Color verde de la paleta */
+    padding: 10px 20px; /* Añadimos algo de padding para la barra */
+    position: relative; /* Necesario para el posicionamiento absoluto del logo */
+}
+
+/* Barra de navegación */
+.navbar {
+    height: 70px; /* Establece una altura fija para la barra de navegación */
+    padding: 0; /* Elimina el padding */
+}
+
+/* Contenedor del logo */
+.logo-container {
+    position: absolute; /* Permite mover el logo sin afectar a otros elementos */
+    left: 50%; /* Mueve el logo al 50% desde la izquierda */
+    transform: translateX(-35%); /* Ajusta el logo para centrarlo */
+}
+
+/* Logo */
+.logo-icon {
+    width: 80px; /* Ajusta el ancho del logo según lo necesites */
+    height: auto; /* Mantiene la proporción original */
+    max-height: 80px; /* Asegura que el logo no sea más alto que la barra */
+}
+
+/* Estilo de la barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 350px; /* Limitar el tamaño de la barra de búsqueda */
+    max-width: 100%; /* Asegurarnos de que no se expanda demasiado */
+}
+
+/* Input de búsqueda */
+.search-bar input {
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+/* Botón de la lupa con fondo blanco y circular */
+.search-bar button {
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px; /* Ajusta el espacio entre el input y la lupa */
+}
+
+/* Ícono de la lupa */
+.search-bar button i {
+    color: #54ab8a;
+    font-size: 18px;
+}
+
+/* Iconos del carrito y usuario */
+.navbar-icons {
+    display: flex;
+    align-items: center; /* Centra los iconos verticalmente */
+}
+
+.navbar-icons i {
+    color: black;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.card {
+    background-color: #cce4da; /* Color de fondo del contenedor */
+    border: none; /* Eliminar borde */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación de transición */
+    height: 100%; /* Asegurarse de que todas las tarjetas tengan la misma altura */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación de transición */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Escalar la tarjeta al pasar el cursor */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Agregar sombra */
+}
+
+.card img {
+    max-height: 200px; /* Establecer una altura máxima para las imágenes */
+    object-fit: contain; /* Mantener la relación de aspecto de la imagen */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+
+.card-body {
+    display: flex; /* Usar Flexbox para alinear el contenido */
+    flex-direction: column; /* Alinear el contenido verticalmente */
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    height: 100%; /* Hacer que el contenido ocupe toda la altura de la tarjeta */
+}
+
+.card-title {
+    text-align: center; /* Centrar el título */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.card-text {
+    text-align: center; /* Centrar el texto de descripción */
+    margin-top: auto; /* Asegurar que el texto esté alineado al final */
+}
+
+.card-img-top {
+    width: 100%; /* Ajusta al 100% del contenedor */
+    height: 150px; /* Ajusta a una altura fija */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    margin-top: 10px; /* Espacio superior para todas las imágenes */
+}
+
+.btn.add-to-cart {
+    background-color: #54ab8a; /* Verde de tu paleta */
+    color: white; /* Texto en blanco */
+    width: 70%; /* Ancho completo del contenedor */
+    padding: 10px 0; /* Aumentar el padding para hacerlo más grande */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de letra */
+    font-weight: 600; /* Grosor de la fuente */
+    text-align: center; /* Centrar el texto */
+    display: block;
+    margin: 10px auto 0 auto; /* Centramos el botón */
+}
+
+.add-to-cart:hover {
+    background-color: #54ab8a; /* Color más oscuro al pasar el mouse */
+}
+
+/* Botón Agregar al carrito */
+.btn.add-to-cart {
+    background-color: #54ab8a; /* Color del botón */
+    color: white; /* Color del texto */
+    display: block;
+    margin: 10px auto 0 auto; /* Centramos el botón */
+}
+
+.btn.add-to-cart:hover {
+    background-color: #479e77; /* Color al pasar el cursor */
+}
+
+#cart-count {
+    font-size: 0.8rem; /* Tamaño de fuente más grande */
+    padding: 0.3em 0.2em; /* Aumento del padding */
+    border-radius: 50%; /* Forma circular */
+    background-color: #ff3d00; /* Fondo rojo brillante */
+    color: white; /* Color del texto blanco */
+    position: absolute; /* Posicionamiento absoluto */
+    top: -50px; /* Ajuste en la parte superior */
+    right: 30px; /* Ajuste en la parte derecha */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+    display: inline-flex; /* Usar flexbox para centrar el texto */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    min-width: 21px; /* Ancho mínimo para asegurar un círculo */
+    height: 19px; /* Altura fija para el círculo */
+}
+
+/* Efecto hover para el contador */
+#cart-count:hover {
+    background-color: #e63900; /* Color al pasar el cursor */
+}
+.cart-sidebar {
+    width: 300px; /* Ajusta este valor según tu diseño */
+    transition: transform 0.3s ease;
+    transform: translateX(100%); /* Comienza fuera de la pantalla */
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 1000; /* Asegúrate de que el carrito esté sobre otros elementos */
+}
+
+/* Esta clase se aplica cuando el carrito está activo */
+.cart-sidebar.active {
+    transform: translateX(0); /* Mueve el carrito a la vista */
+}
+
+.products-shift {
+    transform: translateX(-345px); /* Asegúrate de que este valor sea el mismo que el ancho del carrito */
+    transition: transform 0.3s ease;
+}
+
